@@ -1,6 +1,6 @@
 # noteapp
 
-A new Flutter project.
+A new Flutter project. (This app is not finished, for the moment there is only the home screen)
 
 ## Getting Started
 
