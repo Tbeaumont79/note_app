@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import './constant.dart';
-import './views/home.dart';
+import 'views/homeScreen.dart';
+import './views/noteScreen.dart';
+import './provider/noteProvider.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,12 +12,17 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        scaffoldBackgroundColor: Color(kbackgroundColor),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(),
+    return ChangeNotifierProvider(
+      create: (_) => NoteProvider(),
+      child: MaterialApp(
+          theme: ThemeData(
+            scaffoldBackgroundColor: Color(kbackgroundColor),
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+          ),
+          routes: {
+            '/': (context) => MyHomePage(),
+            '/note': (context) => NoteScreen(),
+          }),
     );
   }
 }
@@ -30,9 +38,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(brightness: Brightness.dark,backgroundColor: Color(kbackgroundColor), elevation: 0,),
-      extendBody: true,
       body: Home(),
+      appBar: AppBar(
+        brightness: Brightness.dark,
+        backgroundColor: Color(kbackgroundColor),
+        elevation: 0,
+      ),
+      extendBody: true,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Container(
         height: 85.0,

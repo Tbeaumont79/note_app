@@ -68,6 +68,12 @@
       "languageVersion": "2.2"
     },
     {
+      "name": "gradient_text",
+      "rootUri": "file:///Users/thibault/flutter/.pub-cache/hosted/pub.dartlang.org/gradient_text-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "matcher",
       "rootUri": "file:///Users/thibault/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.10-nullsafety.1",
       "packageUri": "lib/",
@@ -80,10 +86,22 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///Users/thibault/flutter/.pub-cache/hosted/pub.dartlang.org/nested-0.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/thibault/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0-nullsafety.1",
       "packageUri": "lib/",
       "languageVersion": "2.10"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///Users/thibault/flutter/.pub-cache/hosted/pub.dartlang.org/provider-4.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     },
     {
       "name": "sky_engine",
@@ -146,7 +164,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-02-04T16:30:02.248090Z",
+  "generated": "2021-02-04T22:24:19.816295Z",
   "generator": "pub",
   "generatorVersion": "2.10.4"
 }

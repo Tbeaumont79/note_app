@@ -1,4 +1,4 @@
-import '../models/CardModel.dart';
+import '../models/cardModel.dart';
 import '../constant.dart';
 
 final cardData = [
