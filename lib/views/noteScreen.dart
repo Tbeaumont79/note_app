@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:noteapp/constant.dart';
 import 'package:provider/provider.dart';
 import '../data/noteData.dart';
-import '../widgets/Note/displayNote.dart';
 import '../provider/noteProvider.dart';
 import 'package:gradient_text/gradient_text.dart';
 import '../data/cardData.dart';
+import '../widgets/Note/createNoteList.dart';
 
 class NoteScreen extends StatelessWidget {
   const NoteScreen({Key key}) : super(key: key);
@@ -54,46 +54,8 @@ class NoteScreen extends StatelessWidget {
         ],
       ),
       body: Container(
-        child: ListView.builder(
-          itemCount: noteData[currentCardIndex].length,
-          itemBuilder: (context, int index) {
-            return Column(
-              children: [
-                SizedBox(
-                  height: index == 0 ? 50 : 15,
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  child: Column(
-                    children: [
-                      Align(
-                          alignment: Alignment.centerLeft,
-                          child: Container(
-                            padding: EdgeInsets.only(bottom: 10),
-                            child: Text(
-                              noteData[currentCardIndex][index].month,
-                              style: TextStyle(color: Color(0xff58585F)),
-                            ),
-                          )),
-                      Container(
-                        padding: EdgeInsets.only(top: 10, left: 15, right: 10),
-                        decoration: BoxDecoration(
-                            color: Color(0xff2C2932),
-                            borderRadius: BorderRadius.circular(20)),
-                        child: DisplayNote(
-                          noteTitle:
-                              noteData[currentCardIndex][index].noteTitle,
-                          noteDescription:
-                              noteData[currentCardIndex][index].noteDescription,
-                          noteDate: noteData[currentCardIndex][index].noteDate,
-                        ),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            );
-          },
+        child: CreateNoteList(
+          noteDatas: noteData[currentCardIndex],
         ),
       ),
       extendBody: true,
